@@ -1,6 +1,6 @@
 {
-	"name": "XOR NAND TestPool",
-	"description": "XOR NAND ADA Stake TestPool",
+	"name": "XOR NAND Stake Pool",
+	"description": "XOR NAND ADA Stake Pool",
 	"ticker": "XORN",
 	"homepage": "https://www.xor-nand.io/"
 }
