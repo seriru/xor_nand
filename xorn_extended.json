@@ -1,0 +1,21 @@
+{
+    "info": {
+        "url_png_icon_64x64": "https://api.xor-nand.io/xorn_64x64.png",
+        "url_png_logo": "https://api.xor-nand.io/xorn.png",
+        "location": "London, England",
+        "social": {
+            "twitter_handle": "xor_nand_xorn"
+        },
+        "about": {
+            "server": "Cloud-hosted deployment at datacenters in the UK, Ireland, the Netherlands, and the US.",
+            "company": "We are passionate about Cardano, DeFi, and the future of blockchain technologies. We have several decades of experience with Enterprise deployments."
+        }
+    },
+    "my-pool-ids": {
+        "0": "6a37c771eb33798edea1cc2b95759fc30a7765bbfc63668bdc92c633"
+    },
+    "when-satured-then-recommend": {
+        "0": "bcd7cf751b59f949170a7e6599f9ac03e49b32c19f3f1d8dad3ac210",
+	"1": "e151c6e13d6e6ffe8ed7a99ab40d31164592f8fb1ceeb1b24db49d2f"
+    }
+}
