@@ -7,8 +7,10 @@
             "twitter_handle": "xor_nand_xorn"
         },
         "about": {
-            "server": "Cloud-hosted deployment at datacenters in the UK, Ireland, the Netherlands, and the US.",
-            "company": "We are passionate about Cardano, DeFi, and the future of blockchain technologies. We have several decades of experience with Enterprise deployments."
+            "server": "Cloud hosted high performance deployment at datacenters in the UK, Ireland, the Netherlands, and the US. At XOR-NAND we are using the world fastest shared parallel file system. Our file system delivers lightning-fast performance and endless scalability, shattering all barriers that hold back breakthrough innovations with speed in excess of 10,000 MB/Sec. High Availability, limitless scale and lighting fast file system means higher chances to be rewarded new ADA.",
+            "company": "We are a group of top crypto developers. In our day jobs we are active part of the DeFi crypto ecosystem in London, Tel-Aviv and New York startup scene. We are committed to change the DNA of the global financial system from within.
+We work with the Ouroboros algorithm on a daily basis, harvesting blockchain knowhow to develop the next level financial services infrastructure.
+We invested hard-earned cash to build super-fast Cardano stake-pool infrastructure."
         }
     },
     "my-pool-ids": {
