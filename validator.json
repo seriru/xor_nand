@@ -1,0 +1,6 @@
+{
+    "name": "XOR NAND",
+    "ticker": "XORN",
+    "discord": "754272992460144671",
+    "validation": "https://api.xor-nand.io/validator.json"
+}
