@@ -1,0 +1,41 @@
+FROM rockylinux:9 AS build
+#SHELL ["/bin/bash", "-c"]
+RUN dnf -y update
+RUN dnf -y install wget unzip
+
+WORKDIR /cardano-node
+
+# Download the Armada Alliance'a static binaries
+RUN wget -O 8_1_1.zip https://github.com/armada-alliance/cardano-node-binaries/blob/main/static-binaries/8_1_1.zip?raw=true
+RUN unzip *.zip
+
+# Download the input-output-hk entry point scripts
+RUN wget https://raw.githubusercontent.com/input-output-hk/cardano-node/master/nix/docker/context/bin/entrypoint
+RUN wget https://raw.githubusercontent.com/input-output-hk/cardano-node/master/nix/docker/context/bin/run-client
+RUN wget https://raw.githubusercontent.com/input-output-hk/cardano-node/master/nix/docker/context/bin/run-node
+
+RUN chmod +x entrypoint run-client run-node
+
+WORKDIR /cardano-node/scripts
+
+# Download gLiveView from original source
+RUN wget https://raw.githubusercontent.com/cardano-community/guild-operators/master/scripts/cnode-helper-scripts/env 
+RUN wget https://raw.githubusercontent.com/cardano-community/guild-operators/master/scripts/cnode-helper-scripts/gLiveView.sh
+
+RUN chmod +x env gLiveView.sh
+
+FROM rockylinux:9
+RUN dnf -y update
+
+RUN mkdir -p /cardano/scripts
+
+COPY --from=build /cardano-node/cardano-node/* /usr/local/bin/
+COPY --from=build /cardano-node/entrypoint /usr/local/bin/
+COPY --from=build /cardano-node/run-client /usr/local/bin/
+COPY --from=build /cardano-node/run-node /usr/local/bin/
+COPY --from=build /cardano-node/scripts/* /cardano/scripts/
+
+STOPSIGNAL SIGINT
+
+ENTRYPOINT ["entrypoint"]
+
